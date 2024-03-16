@@ -137,7 +137,7 @@ func UpdateOrder() gin.HandlerFunc {
 	}
 }
 
-func orderItemOrderCreator(order models.Order) string {
+func OrderItemOrderCreator(order models.Order) string {
 	var ctx, cancel = context.WithTimeout(context.Background(), 100*time.Second)
 
 	order.Created_at, _ = time.Parse(time.RFC3339, time.Now().Format(time.RFC3339))

@@ -1,0 +1,180 @@
+{
+	"info": {
+		"_postman_id": "f5f5f352-be32-41a2-96e7-fd0a0e55497c",
+		"name": "Restaurant-app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31394851"
+	},
+	"item": [
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"First_name\":\"testrest\",\r\n    \"Last_name\":\"kumar\",\r\n    \"Password\":\"Test12345679\",\r\n    \"Email\":\"testrest@gmail.com\",\r\n    \"Phone\":\"7894581210\",\r\n    \"User_type\":\"ADMIN\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9000/users/signup",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"users",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Password\":\"Test12345679\",\r\n    \"Email\":\"testrest@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9000/users/login",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add menu",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6InRlc3RyZXN0QGdtYWlsLmNvbSIsIkZpcnN0X25hbWUiOiJ0ZXN0cmVzdCIsIkxhc3RfbmFtZSI6Imt1bWFyIiwiVWlkIjoiNjVmNmQ0NzVkNmI3M2Q2ZmYxN2EzMTMzIiwiVXNlcl90eXBlIjoiIiwiZXhwIjoxNzEwNzYxNDYxfQ.ZQXeWBo9ZwNV26069r-qf44SNEvfbS9syPDZjCQlPQM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Name\":\"slider menu\",\r\n    \"Category\":\"food\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9000/menus",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"menus"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Food Item",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6InRlc3RyZXN0QGdtYWlsLmNvbSIsIkZpcnN0X25hbWUiOiJ0ZXN0cmVzdCIsIkxhc3RfbmFtZSI6Imt1bWFyIiwiVWlkIjoiNjVmNmQ0NzVkNmI3M2Q2ZmYxN2EzMTMzIiwiVXNlcl90eXBlIjoiIiwiZXhwIjoxNzEwNzYxNDYxfQ.ZQXeWBo9ZwNV26069r-qf44SNEvfbS9syPDZjCQlPQM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Name\":\"vege briyani\",\r\n    \"Price\":250,\r\n    \"Food_image\":\"not available\",\r\n    \"Menu_id\":\"65f6d5e0d6b73d6ff17a3134\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9000/foods",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"foods"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Menu",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6InRlc3RyZXN0QGdtYWlsLmNvbSIsIkZpcnN0X25hbWUiOiJ0ZXN0cmVzdCIsIkxhc3RfbmFtZSI6Imt1bWFyIiwiVWlkIjoiNjVmNmQ0NzVkNmI3M2Q2ZmYxN2EzMTMzIiwiVXNlcl90eXBlIjoiIiwiZXhwIjoxNzEwNzYxNDYxfQ.ZQXeWBo9ZwNV26069r-qf44SNEvfbS9syPDZjCQlPQM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:9000/menus",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"menus"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Food",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6InRlc3RyZXN0QGdtYWlsLmNvbSIsIkZpcnN0X25hbWUiOiJ0ZXN0cmVzdCIsIkxhc3RfbmFtZSI6Imt1bWFyIiwiVWlkIjoiNjVmNmQ0NzVkNmI3M2Q2ZmYxN2EzMTMzIiwiVXNlcl90eXBlIjoiIiwiZXhwIjoxNzEwNzYxNDYxfQ.ZQXeWBo9ZwNV26069r-qf44SNEvfbS9syPDZjCQlPQM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:9000/foods",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"foods"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
